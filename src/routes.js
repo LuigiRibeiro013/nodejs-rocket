@@ -10,7 +10,8 @@ export const routes = [
     path: buildRoutePath("/users"),
     handler: (req, res) => {
       const { search } = req.query;
-      const users = Database.select(
+
+      const users = database.select(
         "users",
         search
           ? {
@@ -35,7 +36,7 @@ export const routes = [
         email,
       };
 
-      Database.insert("users", user);
+      database.insert("users", user);
 
       return res.writeHead(201).end();
     },

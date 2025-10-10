@@ -1,4 +1,3 @@
-const buf = Buffer.from("Hello");
+const buf = Buffer.from("hello");
 
 console.log(buf.toJSON());
-//teste

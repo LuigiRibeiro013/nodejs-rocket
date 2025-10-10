@@ -1,4 +1,4 @@
-export function extractQueryParams(querry) {
+export function extractQueryParams(query) {
   return query
     .substr(1)
     .split("&")
@@ -6,6 +6,7 @@ export function extractQueryParams(querry) {
       const [key, value] = param.split("=");
 
       queryParams[key] = value;
+
       return queryParams;
     }, {});
 }
